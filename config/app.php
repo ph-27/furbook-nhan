@@ -154,11 +154,14 @@ return [
         /*
          * Application Service Providers...
          */
-        furbook\Providers\AppServiceProvider::class,
-        furbook\Providers\AuthServiceProvider::class,
-        // furbook\Providers\BroadcastServiceProvider::class,
-        furbook\Providers\EventServiceProvider::class,
-        furbook\Providers\RouteServiceProvider::class,
+        Furbook\Providers\AppServiceProvider::class,
+        Furbook\Providers\AuthServiceProvider::class,
+        // Furbook\Providers\BroadcastServiceProvider::class,
+        Furbook\Providers\EventServiceProvider::class,
+        Furbook\Providers\RouteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
     ],
 
@@ -208,7 +211,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
