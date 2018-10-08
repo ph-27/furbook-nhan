@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Http;
+namespace Furbook\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -14,11 +14,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \furbook\Http\Middleware\CheckForMaintenanceMode::class,
+        \Furbook\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \furbook\Http\Middleware\TrimStrings::class,
+        \Furbook\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \furbook\Http\Middleware\TrustProxies::class,
+        \Furbook\Http\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,12 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \furbook\Http\Middleware\EncryptCookies::class,
+            \Furbook\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \furbook\Http\Middleware\VerifyCsrfToken::class,
+            \Furbook\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -51,30 +51,14 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \furbook\Http\Middleware\Authenticate::class,
+        'auth' => \Furbook\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \furbook\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Furbook\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-    ];
-
-    /**
-     * The priority-sorted list of middleware.
-     *
-     * This forces the listed middleware to always be in the given order.
-     *
-     * @var array
-     */
-    protected $middlewarePriority = [
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \furbook\Http\Middleware\Authenticate::class,
-        \Illuminate\Session\Middleware\AuthenticateSession::class,
-        \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        \Illuminate\Auth\Middleware\Authorize::class,
     ];
 }

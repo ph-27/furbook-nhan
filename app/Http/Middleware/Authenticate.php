@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Http\Middleware;
+namespace Furbook\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 

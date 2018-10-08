@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Http\Middleware;
+namespace Furbook\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 

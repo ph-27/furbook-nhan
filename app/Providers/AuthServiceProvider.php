@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Providers;
+namespace Furbook\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'furbook\Model' => 'furbook\Policies\ModelPolicy',
+        'Furbook\Model' => 'Furbook\Policies\ModelPolicy',
     ];
 
     /**

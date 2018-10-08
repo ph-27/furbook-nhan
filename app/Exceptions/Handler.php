@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Exceptions;
+namespace Furbook\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

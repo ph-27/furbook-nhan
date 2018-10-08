@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Http\Controllers;
+namespace Furbook\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

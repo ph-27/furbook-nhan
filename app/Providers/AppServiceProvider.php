@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Providers;
+namespace Furbook\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

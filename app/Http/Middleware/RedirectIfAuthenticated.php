@@ -1,6 +1,6 @@
 <?php
 
-namespace furbook\Http\Middleware;
+namespace Furbook\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

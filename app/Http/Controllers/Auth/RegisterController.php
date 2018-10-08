@@ -1,9 +1,9 @@
 <?php
 
-namespace furbook\Http\Controllers\Auth;
+namespace Furbook\Http\Controllers\Auth;
 
-use furbook\User;
-use furbook\Http\Controllers\Controller;
+use Furbook\User;
+use Furbook\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \furbook\User
+     * @return \Furbook\User
      */
     protected function create(array $data)
     {
